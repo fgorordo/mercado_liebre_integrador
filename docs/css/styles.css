@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Color variables */
+:root {
+  --main-header-color: #EAC926;
+  --main-azul: #03264C;
+  --main-celeste: #1259c3;
+  --main-gris-oscuro: #666;
+  --main-gris-claro: #ebebeb;
+  --main-verde: #39b54a;
+  --main-negro: #1c1c1c;
+}
+
+/* Font variables */
+:root {
+  --main-texto: 12px;
+  --main-titulo: 24px;
+  --main-precio: 18px;
+  --main-descuentos: 16px;
+  --main-descripciones: 16px  
+}
+
+/* Body Settings */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header START */
+header {
+  background-color: var(--main-header-color);
+  padding-bottom: 18px;
+}
+
+.header-logo {
+  width: 360px;
+  padding: 18px;
+}
+
+.header-text {
+  padding: 8px;
+  font-size: var(--main-texto);
+  width: 255px;
+  margin: auto;
+}
+
+header > nav > ul > li  {
+  list-style: none;
+}
+
+.header-main-menu > ul > li > a {
+  color: var(--main-negro);
+  text-decoration: none;
+  font-size: var(--main-texto);
+}
+.header-main-menu > ul > li > a:hover{
+  text-decoration: underline;
+}
+
+.header-main-menu {
+  margin-bottom: 18px;
+}
+
+.header-account-menu > ul > li > a {
+  color: var(--main-negro);
+  text-decoration: none;
+  font-size: var(--main-texto);
+  margin-right: 6px;
+}
+.header-account-menu > ul > li > a:hover{
+  text-decoration: underline;
+}
+
+.header-account-menu {
+  margin-bottom: 18px;
+}
+
+.burger-menu {
+  margin: auto;
+  width: 40px;
+  text-align: center;
+  padding: 10px;
+  color: var(--main-gris-claro);
+  background-color: var(--main-azul);
+  border-radius: 5px;
+}
+/* Header END */
+
+/* Main START*/
+.main-ultima-visita > h2 {
+  font-size: var(--main-titulo);
+}
+
+.main-ofertas > h2{
+  font-size: var(--main-titulo)
+}
+.precio {
+  font-size: var(--main-precio);
+}
+.descuento {
+  font-size: var(--main-descuentos)
+}
+.nombre-item {
+  font-size: var(--main-descripciones)
+}
+/* Main END */
+
+/* Footer START */
+footer {
+  padding: 18px;
+}
+.footer-item {
+  padding: 18px;
+  text-align: center;
+  color: var(--main-gris-oscuro)
+}
+
+.footer-item > article > i {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: var(--main-celeste)
+}
+.footer-item > article > h2 {
+  font-size: var(--main-descripciones);
+}
+
+.footer-item > article > p {
+  font-size: var(--main-texto)
+}
+
+.footer-copyright > article > p {
+  font-size: var(--main-texto);
+  color: var(--main-gris-oscuro);
+  text-align: left;
+}
+/* Footer END */
