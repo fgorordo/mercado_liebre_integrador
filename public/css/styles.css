@@ -39,6 +39,24 @@ header {
 .header-logo {
   width: 360px;
   padding: 18px;
+  display: block;
+  margin: auto;
+}
+
+.barra-busqueda {
+  display: block;
+  margin-left:auto;
+  margin-right: auto;
+  padding: 2px;
+  text-align: center;
+}
+.busqueda {
+  width: 35%;
+}
+
+.btn-busqueda {
+  background-color: var(--main-gris-claro);
+  border: 1px solid #000
 }
 
 .header-text {
