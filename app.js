@@ -15,5 +15,6 @@ app.listen(expressPort, () => {
 })
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/views/index.html'))
+  res.sendFile(path.resolve(__dirname, './views/index.html'))
 })
+
