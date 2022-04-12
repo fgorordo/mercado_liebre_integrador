@@ -84,6 +84,8 @@ header {
   cursor:pointer;
 }
 
+/* Header Top-Right Text */
+
 .top-container__copy {
   display: flex;
   margin-left: auto;
@@ -143,6 +145,8 @@ main {
   gap: 24px;
 }
 
+/* Sections Titles */
+
 .ultima-visita > h2,
 .ofertas > h2 {
   color: var(--main-dark-gray);
@@ -150,6 +154,7 @@ main {
 }
 
 /* Product Item */
+
 .product-item {
   background-color: var(--main-white);
   padding: 12px;
@@ -158,14 +163,20 @@ main {
   border-radius: 6px;
 }
 
+/* Product Img */
+
 .product-item__img {
   width: 400;
 }
+
+/* Product img source */
 
 .product-item__img > img {
   width: 100%;
   border-bottom: 2px solid var(--main-light-gray);
 }
+
+/* Product Item Info */
 
 .product-item__info {
   text-align: left;
@@ -175,10 +186,14 @@ main {
   gap: 12px
 }
 
+/* Product Title */
+
 .product-item__title > h3{
   font-weight: 200;
   color: var(--main-dark-gray);
 }
+
+/* Product Truck Icon */
 
 .fa-truck {
   font-size: 1.5em;
@@ -191,9 +206,14 @@ main {
   bottom: 55px;
 }
 
+/* Product Item Price */
+
 .info-price {
   font-weight: 600;
 }
+
+/* Product Item Discount */
+
 .info-discount {
   color: var(--main-green);
 }
