@@ -253,10 +253,139 @@ main {
 /* Responsive Section */
 
 /* Tablets, 768px and up */
-@media (min-width: 768px){}
+@media (min-width: 768px){
+
+  /* HEADER */
+  header {
+    padding: 18px;
+  }
+
+/* Header upper */
+
+.top-container {
+  flex-wrap: nowrap;
+  margin-bottom: 24px;
+}
+
+/* Logo */
+
+.top-container__logo {
+  width: calc(33% - 12px);
+}
+
+/* Search label container */
+
+.top-container__search-bar {
+  width: calc(33% - 12px);
+  align-items: center;
+}
+
+/* Header Top-Right Text */
+
+.top-container__copy {
+  align-items: center;
+  font-size: 1em;
+}
+
+/* Header Hamburger menu */
+
+.hamburger-container {
+  display:none
+}
+
+.bottom-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Header menu's */
+
+.bottom-container__right-menu,
+.bottom-container__left-menu {
+  display: block;
+}
+
+/* Header menu's  > ul*/
+
+.bottom-container__right-menu > ul,
+.bottom-container__left-menu > ul {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+}
+
+
+/* Menu's hover effect */
+
+.bottom-container__right-menu > ul > li > a:hover,
+.bottom-container__left-menu > ul > li > a:hover {
+  border-bottom: 1px solid var(--main-black);
+}
+
+/* Header menu's > ul > li > a */
+
+.bottom-container__right-menu > ul > li > a,
+.bottom-container__left-menu > ul > li > a {
+  text-decoration: none;
+  color: var(--main-black);
+}
+
+/* Right menu gap */
+
+.bottom-container__right-menu > ul > li > a > i {
+  margin-left: 6px;
+}
+
+/* MAIN SECTION */
+
+/* Ajustado el tamaño del banner */
+
+.banner-container > img {
+  height: 150px;
+}
+
+/* Ajustado el contenedor para version tablet */
+.ultima-visita,
+.ofertas {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Ajustada la disposicion del titulo */
+
+.ultima-visita > h2,
+.ofertas > h2 {
+  flex-basis: 100%;
+}
+
+/* Ajustado el tamaño de las cajas de la seccion */
+
+.product-item {
+  width: 45%;
+}
+
+/* Ajustado el tamaño del icono */
+
+.product-item__info > i {
+  font-size: 1.3em;
+}
+
+}
 
 /* Desktop, 992px and up */
-@media (min-width: 992px){}
+@media (min-width: 992px){
+
+  /* Header max width para resoluciones grandes */
+  header > div {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .product-item {
+    width: 23%;
+  }
+}
 
 /* Large Desktop, 1200px and up */
 @media (min-width:1200px){}
