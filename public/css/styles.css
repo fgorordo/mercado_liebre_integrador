@@ -87,12 +87,15 @@ header {
 /* Header Top-Right Text */
 
 .top-container__copy {
-  display: flex;
   margin-left: auto;
   margin-right: auto;
   gap: 6px;
   margin-bottom: 12px;
-  font-size: 1.2em;
+}
+
+.top-container__copy > p {
+  font-size: 1em;
+  font-weight: bold;
 }
 
 /* Header lower */
@@ -133,7 +136,7 @@ main {
 
 .banner-container > img {
   width: 100vw;
-  height: 100px;
+  height: 120px;
 }
 
 /* Ultima Visita Container & Ofertas */
@@ -159,8 +162,15 @@ main {
   background-color: var(--main-white);
   padding: 12px;
   position: relative;
-  box-shadow: 0px 0px 10px rgb(100,100,100);
   border-radius: 6px;
+  position: relative;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.product-item:hover {
+  box-shadow: 0px 0px 10px rgb(100,100,100);
+  transform: scale(1.1);
 }
 
 /* Product Img */
@@ -191,8 +201,13 @@ main {
 .product-item__title > h3{
   font-weight: 200;
   color: var(--main-dark-gray);
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 
+.product-item:hover > .product-item__title > h3 {
+  opacity: 1;
+}
 /* Product Truck Icon */
 
 .fa-truck {
@@ -204,6 +219,11 @@ main {
   position: absolute;
   right : 20px;
   bottom: 55px;
+  transition: all 0.5s ease;
+}
+
+.product-item:hover > .product-item__info > i {
+  transform: rotate(-90deg);
 }
 
 /* Product Item Price */
@@ -217,6 +237,8 @@ main {
 .info-discount {
   color: var(--main-green);
 }
+
+
 
 
 /* FOOTER */
@@ -240,6 +262,11 @@ main {
 .card__icon {
   color: var(--main-light-blue);
   font-size: 2em;
+  transition: color 0.5s ease;
+}
+
+.card__icon:hover {
+  color: var(--main-green);
 }
 
 /* Copyright Text */
@@ -249,6 +276,106 @@ main {
   margin-top:24px;
 }
 /* ############################*/
+
+/* COMIENZO DEL REGISTER */
+
+.form-container {
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  padding: 24px;
+}
+
+
+.form-group,
+.form-group__b-day,
+.form-group__user-type,
+.form-group__user-interest {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.form-group__name-l {
+  font-size: 18px;
+}
+
+.form-group__input {
+  border-radius: 6px;
+  border: none;
+  height: 38px;
+  margin-top: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.form-group__user-type > p {
+  font-weight: bold;
+  margin: 12px;
+  font-size: 24px;
+  margin-top: 24px;
+}
+
+.form-group__radio {
+  margin-right: 6px;
+}
+
+.form-group__user-type > label {
+  margin-right: 12px;
+}
+
+.form-group__user-interest > p {
+  font-weight: bold;
+  margin: 12px;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.form-group__user-interest  {
+  text-align: left;
+  padding: 24px;
+}
+
+.form-group__user-profile-photo {
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 24px;
+}
+
+.form-group__user-profile-photo > p { 
+  margin: 12px;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-top:24px;
+}
+
+.submit-btn,
+.reset-btn {
+  border:none;
+  background-color: var(--main-light-blue);
+  color: var(--main-light-gray);
+  padding: 12px 24px;
+  transition:all 0.7s ease;
+}
+
+.submit-btn:hover,
+.reset-btn:hover {
+  background-color: var(--main-blue);
+}
+
+
+
+
+
+
 
 /* Responsive Section */
 
@@ -265,26 +392,30 @@ main {
 .top-container {
   flex-wrap: nowrap;
   margin-bottom: 24px;
+  align-items: center;
 }
 
 /* Logo */
 
 .top-container__logo {
-  width: calc(33% - 12px);
+  width: calc(30% - 12px);
 }
 
 /* Search label container */
 
 .top-container__search-bar {
-  width: calc(33% - 12px);
-  align-items: center;
+  width: calc(30% - 12px);
 }
 
 /* Header Top-Right Text */
 
 .top-container__copy {
-  align-items: center;
-  font-size: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+.top-container__copy > p {
+  font-size: 12px;
 }
 
 /* Header Hamburger menu */
@@ -352,6 +483,10 @@ main {
   justify-content: center;
 }
 
+.banner-container > img {
+  height: 200px;
+}
+
 /* Ajustada la disposicion del titulo */
 
 .ultima-visita > h2,
@@ -382,9 +517,38 @@ main {
     margin: auto;
   }
 
+  .top-container {
+    gap: 5%;
+  }
+
+  .top-container__copy > p {
+    font-size: 16px;
+  }
+
+  /* Ajustado el tamaño de las cajas de cada seccioón */
+
   .product-item {
     width: 23%;
   }
+
+  .banner-container > img {
+    height: 250px;
+  }
+
+  .form-container {
+    width: 600px;
+  } 
+
+  .main-register {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-container {
+    display: flex;
+    gap: 12px;
+  }
+
 }
 
 /* Large Desktop, 1200px and up */
