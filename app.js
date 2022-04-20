@@ -10,7 +10,7 @@ const publicPath = path.resolve(__dirname, './public')
 app.use(express.static(publicPath))
 
 // Server start
-app.listen(expressPort, () => {
+app.listen(process.env.expressPort || expressPort, () => {
   console.log(`Servidor iniciado en el puerto: ${expressPort}`)
 })
 
